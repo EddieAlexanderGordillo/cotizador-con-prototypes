@@ -5,6 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../src/style/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Cotiza tu seguro de Auto</h1>
+      </header>
+      <form class="formulario" id="cotizar-seguro">
+        <div class="container__input">
+          <label for="marca" class="labels">Marca: </label>
+          <select class="" id="marca">
+            <option value="">- Seleccionar -</option>
+            <option value="1">Americano</option>
+            <option value="2">Asiatico</option>
+            <option value="3">Europeo</option>
+          </select>
+        </div>
+        <div class="container__input">
+          <label for="year" class="labels">Año: </label>
+          <select class="" id="year"></select>
+        </div>
+        <fieldset class="container__fielset labels">
+          <legend class="">Tipo Seguro</legend>
+          <div class="container__fielset-radios">
+            <div>
+              <label for="" class="labels">Básico</label>
+              <input type="radio" name="tipo" value="basico" checked />
+            </div>
+            <div>
+              <label for="" class="labels">Completo</label>
+              <input type="radio" name="tipo" value="completo" />
+            </div>
+          </div>
+        </fieldset>
+        <div id="cargando" class="hidden">
+          <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>
+        </div>
+        <div id="resultado"></div>
+        <div class="container__button">
+          <button type="submit" class="button__cotizar">Cotizar Seguro</button>
+        </div>
+      </form>
+    </div>
+    <script src="../src/index.js"></script>
+  </body>
 </html>
